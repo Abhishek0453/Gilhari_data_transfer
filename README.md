@@ -57,7 +57,21 @@ Once the cluster and collection are made after signing in to MongoDB, a few meth
   `mongoimport --uri "mongodb://localhost:27017/Employee" --collection Employee --file "C:/Users/<username>/Desktop/data.json" --jsonArray` and to export it to an 'output.json' file, 
   `mongoexport --host localhost --port 27017 --db Employee --collection Employee --out C:/Users/<username>/Desktop/output.json` can be used.
 
-  If the database has a username and password, the credentials can be added to the command.
+  The credentials can be added to the command if the database has a username and password.
 
-  The command line tools can be downloaded from [here](https://www.mongodb.com/try/download/database-tools) and the complete documentation is provided [here](https://www.mongodb.com/docs/database-tools/).
+  The command line tools can be downloaded from [here](https://www.mongodb.com/try/download/database-tools), and the complete documentation is provided [here](https://www.mongodb.com/docs/database-tools/).
   
+
+## Introduction to Couchbase
+Couchbase Server is an open-source, distributed, multi-model NoSQL, JSON document database that is enhanced for interactive applications. Its server is designed to provide us with easy-to-scale key-value or JSON document access with high sustained throughput and low latency. These applications may help in serving many users by storing, creating, aggregating, retrieving, manipulating and presenting data. It is designed to be gathered from a single machine to large-scale deployments spanning many machines.
+
+The Couchbase server can be installed from [here](https://www.couchbase.com/downloads/).
+
+After installing the server, set up a basic cluster and bucket.
+
+### Interacting with Couchbase
+- Like MongoDB, Couchbase has its own interface to interact with the database. The server can be accessed on any browser with a server number and port number through which the Couchbase server will listen to APIs 
+ and CRUD commands sent to it. The browser interface contains a GUI to help facilitate posting and querying data from the buckets. 
+- An alternative way to communicate with it is through the command line. couchbase-cli is a command line interface used to interact with the Couchbase server. The server can be accessed through the command line using the connection string for the server, username, password, and the bucket name to be accessed. For example, to post data stored in a 'data.json' file on the desktop, the command `cbimport json -c couchbase://localhost:8091 -u <username> -p <password> -b Employee -d file://C:/Users/<user>/Desktop/data.json -f list -g %id%` can be used whereas the command `cbexport json -c couchbase://localhost:8091 -u <username> -p <password> -b Employee -f list -o C:/Users/<user>/Desktop/output.json` extracts the data from a bucket name 'Employee' to a 'output.json' file on the desktop.
+
+  The entire documentation for the command line interface for couchbase can be found [here](https://docs.couchbase.com/server/current/cli/cbcli/couchbase-cli.html).
