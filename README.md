@@ -35,6 +35,7 @@ The most useful features for our project would be support for JSON, including a 
 
 The database can be downloaded for your device from [here](https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html).
 
+The jdbc driver for Oracle can be downloaded from [here](https://www.oracle.com/in/database/technologies/maven-central-guide.html).
 
 ## Creating the 19c Database:
 Step1: create an OCI account
