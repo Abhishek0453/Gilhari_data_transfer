@@ -45,9 +45,14 @@ Step4: Provide the database,a name,password
 After creating the database, go to connections and copy one of the connection strings
 
 Add These 2 to the .jdx file
+
 JDX_DATABASE JDX:jdbc:oracle:thin:@<connection string>USER=ADMIN;PASSWORD=<password>;JDX_DBTYPE=Oracle;DEBUG_LEVEL=0
 
 JDBC_DRIVER oracle.jdbc.driver.OracleDriver
+
+Also, you will have to put the jdbc connection jar file for 19c in the config folder
+
+To know more about the .jdx file/config file etc please refer to the documentation provided by Gilhari
 ## Introduction to MongoDB
 MongoDB is an open-source document-oriented database designed to store
 large amounts of data with ease of working with it. It is a NoSQL database, meaning it does not involve tables with relations between attributes of objects stored in the database. Unlike Relational databases, data is not stored in tables; instead, collections and documents are used. A non-relational database does not have a fixed
