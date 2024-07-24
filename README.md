@@ -35,13 +35,18 @@ The most useful features for our project would be support for JSON including par
 
 ## Creating the 19c Database:
 Step1: create a OCI account
+
 Step2: go to create ATP(Autonomous Transaction Processing) database
+
 Step3: Select Transaction Processing in workload types
+
 Step4: Provide the database,a name,password
 ## Connecting the 19c Database with Gilhari:
 After creating the database, go to connections and copy one of the connection strings
+
 Add These 2 to the .jdx file
 JDX_DATABASE JDX:jdbc:oracle:thin:@<connection string>USER=ADMIN;PASSWORD=<password>;JDX_DBTYPE=Oracle;DEBUG_LEVEL=0
+
 JDBC_DRIVER oracle.jdbc.driver.OracleDriver
 ## Introduction to MongoDB
 MongoDB is an open-source document-oriented database designed to store
