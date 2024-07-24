@@ -27,7 +27,22 @@ The procedure to run Gilhari examples is as follows:
 - To get the image working, run the `run_docker_image` batch file, which fetches the newly built image and runs it by connecting it with the database connection string provided in the `.jdx` file.
 - To interact with the microservice, a `curlCommands` batch file is provided, which can be modified according to requirement.
 
+## About Oracle 19c
+It is a relational database with support for various productivity features
+Improvement in performances from its previous versions through automatic indexing through a ML algorithm
+A query quarantining system to prevent overloading of system resources with a large amount of query requests
+The most useful features for our project would be support for JSON including partial updating facility for the same
 
+## Creating the 19c Database:
+Step1: create a OCI account
+Step2: go to create ATP(Autonomous Transaction Processing) database
+Step3: Select Transaction Processing in workload types
+Step4: Provide the database,a name,password
+## Connecting the 19c Database with Gilhari:
+After creating the database, go to connections and copy one of the connection strings
+Add These 2 to the .jdx file
+JDX_DATABASE JDX:jdbc:oracle:thin:@<connection string>USER=ADMIN;PASSWORD=<password>;JDX_DBTYPE=Oracle;DEBUG_LEVEL=0
+JDBC_DRIVER oracle.jdbc.driver.OracleDriver
 ## Introduction to MongoDB
 MongoDB is an open-source document-oriented database designed to store
 large amounts of data with ease of working with it. It is a NoSQL database, meaning it does not involve tables with relations between attributes of objects stored in the database. Unlike Relational databases, data is not stored in tables; instead, collections and documents are used. A non-relational database does not have a fixed
