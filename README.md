@@ -41,6 +41,8 @@ Step2: go to create ATP(Autonomous Transaction Processing) database
 Step3: Select Transaction Processing in workload types
 
 Step4: Provide the database,a name,password
+
+There is an option to select mTLS, It's a security protocol that extends Transport Layer Security (TLS) by adding mutual authentication between two parties communicating over a network connection. Do not select it.After completing all the above steps, it will take some time for the database to become available
 ## Connecting the 19c Database with Gilhari:
 After creating the database, go to connections and copy one of the connection strings
 
