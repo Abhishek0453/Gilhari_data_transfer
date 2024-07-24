@@ -1,0 +1,7 @@
+docker build -t demo1 -f ./Dockerfile .
+
+docker run -p 79:8080
+
+REM uncomment the following if using mac or Linux and comment the docker run command
+
+REM docker run -p 79:8080 --platform linux/amd64 demo1
