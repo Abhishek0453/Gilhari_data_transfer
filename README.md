@@ -28,21 +28,26 @@ The procedure to run Gilhari examples is as follows:
 - To interact with the microservice, a `curlCommands` batch file is provided, which can be modified according to requirement.
 
 ## About Oracle 19c
-It is a relational database with support for various productivity features
-Improvement in performances from its previous versions through automatic indexing through a ML algorithm
-A query quarantining system to prevent overloading of system resources with a large amount of query requests
-The most useful features for our project would be support for JSON including partial updating facility for the same
+It is a relational database with support for various productivity features.
+Significant improvements were made in performance from its previous versions through automatic indexing through a Machine learning algorithm.
+It also hosts a query quarantining system to prevent overloading of system resources with a large amount of query requests
+The most useful features for our project would be support for JSON, including a partial updating facility for the same
+
+The database can be downloaded for your device from [here](https://www.oracle.com/in/database/technologies/oracle-database-software-downloads.html).
+
 
 ## Creating the 19c Database:
-Step1: create a OCI account
+Step1: create an OCI account
 
 Step2: go to create ATP(Autonomous Transaction Processing) database
 
 Step3: Select Transaction Processing in workload types
 
-Step4: Provide the database,a name,password
+Step4: Provide the database, a name, a password
 
-There is an option to select mTLS, It's a security protocol that extends Transport Layer Security (TLS) by adding mutual authentication between two parties communicating over a network connection. Do not select it.After completing all the above steps, it will take some time for the database to become available
+There is an option to select mTLS, a security protocol that extends Transport Layer Security (TLS) by adding mutual authentication between two parties communicating over a network connection. Do not select it. After completing all the above steps, it will take some time for the database to become available
+
+
 ## Connecting the 19c Database with Gilhari:
 After creating the database, go to connections and copy one of the connection strings
 
@@ -54,7 +59,7 @@ JDBC_DRIVER oracle.jdbc.driver.OracleDriver
 
 Also, you will have to put the jdbc connection jar file for 19c in the config folder
 
-To know more about the .jdx file/config file etc please refer to the documentation provided by Gilhari
+To know more about the .jdx file/config file etc, please refer to the documentation provided by Gilhari
 ## Introduction to MongoDB
 MongoDB is an open-source document-oriented database designed to store
 large amounts of data with ease of working with it. It is a NoSQL database, meaning it does not involve tables with relations between attributes of objects stored in the database. Unlike Relational databases, data is not stored in tables; instead, collections and documents are used. A non-relational database does not have a fixed
@@ -73,12 +78,15 @@ Once the cluster and collection are made after signing in to MongoDB, a few meth
   The complete guidelines can be found [here](https://www.mongodb.com/docs/compass/current/manage-data/).
 
 -**Using Mongo Shell**
-  Once Mongo Shell is installed, it can be connected to the database through a connection string and enables it to interact using APIs. 
+  Once Mongo Shell is installed, it can be connected to the database through a connection string, which enables it to interact using APIs. 
 
   The full documentation can be found [here](https://www.mongodb.com/docs/v4.4/crud/).
 
 -**Through command line**
   Windows terminal can be used to interact with the databases through commands that include the database URI, cluster name, table name and instructions.
+
+>[!NOTE]
+>Before running the batch file `Mongo.bat`, make sure that the cluster is accessible, the required table exists in the cluster, and the MongoDB service is running.
 
   For example, to transfer JSON data from a local file named 'data.json' to a database named 'Employee', you can use the command 
   `mongoimport --uri "mongodb://localhost:27017/Employee" --collection Employee --file "C:/Users/<username>/Desktop/data.json" --jsonArray` and to export it to an 'output.json' file, 
@@ -87,6 +95,7 @@ Once the cluster and collection are made after signing in to MongoDB, a few meth
   The credentials can be added to the command if the database has a username and password.
 
   The command line tools can be downloaded from [here](https://www.mongodb.com/try/download/database-tools), and the complete documentation is provided [here](https://www.mongodb.com/docs/database-tools/).
+
   
 
 ## Introduction to Couchbase
@@ -101,4 +110,7 @@ After installing the server, set up a basic cluster and bucket.
  and CRUD commands sent to it. The browser interface contains a GUI to help facilitate posting and querying data from the buckets. 
 - An alternative way to communicate with it is through the command line. couchbase-cli is a command line interface used to interact with the Couchbase server. The server can be accessed through the command line using the connection string for the server, username, password, and the bucket name to be accessed. For example, to post data stored in a 'data.json' file on the desktop, the command `cbimport json -c couchbase://localhost:8091 -u <username> -p <password> -b Employee -d file://C:/Users/<user>/Desktop/data.json -f list -g %id%` can be used whereas the command `cbexport json -c couchbase://localhost:8091 -u <username> -p <password> -b Employee -f list -o C:/Users/<user>/Desktop/output.json` extracts the data from a bucket name 'Employee' to a 'output.json' file on the desktop.
 
-  The entire documentation for the command line interface for couchbase can be found [here](https://docs.couchbase.com/server/current/cli/cbcli/couchbase-cli.html).
+>[!NOTE]
+>Ensure the Couchbase server and bucket exist before running the `Couchbase.bat` file provided and that the credentials provided are correct.
+
+  The entire documentation for the command line interface for Couchbase can be found [here](https://docs.couchbase.com/server/current/cli/cbcli/couchbase-cli.html).
