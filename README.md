@@ -12,8 +12,8 @@ The microservice can be configured by modifying the `gilhari_service.config` and
 This file contains information about the schema of the database tables, class mappings, network port to be used for communication and the JDBC driver (jar file) path. 
 The `classnames_map` file is located in the `config` directory, and the persistent classes are in the `bin` directory. The files compiled to generate the classes are in the `src` directory. 
 
-### jdx file
-The `jdx` file in the `config` directory of the example contains the mappings of attributes present in the JSON objects that are meant to be transferred. It also provides specifications for the relations and primary keys within the objects.
+### JDX ORM Specification files
+The `jdx` ORM specification in the `config` directory of the example contains the mappings of attributes present in the JSON objects that are meant to be transferred. It also provides specifications for the relations and primary keys within the objects.
 
 Furthermore, it contains the connection link to the database preceded by a `JDX_DATABASE` tag and the path to the driver class file within the `jar` file that is mapped in the `config` file.
 
