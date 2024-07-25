@@ -7,7 +7,7 @@ The required files for the Gilhari microservice can be downloaded from the offic
 
 The package includes all the files required to run the microservice as a docker image and a few examples to get started with.  
 
-The microservice can be configured by modifying the `gilhari_service.config` and the `.jdx` file in the `config` directory of the example.
+The microservice can be configured by modifying the `gilhari_service.config` and the `.jdx` ORM specification file in the `config` directory of the example.
 ### gilhari_service.config file
 This file contains information about the schema of the database tables, class mappings, network port to be used for communication and the JDBC driver (jar file) path. 
 The `classnames_map` file is located in the `config` directory, and the persistent classes are in the `bin` directory. The files compiled to generate the classes are in the `src` directory. 
