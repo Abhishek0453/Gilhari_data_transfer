@@ -14,22 +14,3 @@ public class JSON_Student extends JDX_JSONObject {
         super(jsonObject);
     }
 }
-
-/**
- * A shell (container) class defining a domain model object class for Employee objects 
- * based on the class JSONObject.  This class needs to define just two constructors.
- * Most of the processing is handled by the superclass JDX_JSONObject.
- * <p> 
- * @author Damodar Periwal
- *
- */
-// public class JSON_Employee extends JDX_JSONObject {
-
-//     public JSON_Employee() {
-//         super();
-//     }
-
-//     public JSON_Employee(JSONObject jsonObject) throws JSONException {
-//         super(jsonObject);
-//     }
-// }
